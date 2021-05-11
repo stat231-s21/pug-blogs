@@ -128,8 +128,6 @@ table_test <- data.frame(images = paste0("![](img/",img_file_names,")")
 colorpal <- c("774bb0","#ede6fb","774bb0","#ede6fb","774bb0","#ede6fb")
 ```
 
-<iframe height="950" width="100%" frameborder="no" title="Investigating Social and Emotional Factors During Covid-19" src="https://klingliu.shinyapps.io/blogproject/"> </iframe>
-
 STAT231, Amherst College
 <br>
 Spring 2021
