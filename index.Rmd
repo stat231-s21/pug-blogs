@@ -341,4 +341,10 @@ table_test %>%
 
 # Resources `r emo::ji("books")`
 
-Design at top of page is taken from an image created by [Mona Chalabi](https://monachalabi.com/).
+<ul>
+  <li> Design at top of page is taken from an image created by [Mona Chalabi](https://monachalabi.com/) </li>
+  <li> Font is Poppins from [Google fonts](https://fonts.google.com/) </li>
+  <li> Emojis included via the [`emo` R package](https://github.com/hadley/emo) <br>
+          Check out the emojis available: `r emo::jis %>% select(group, subgroup, name, emoji,keywords,aliases) %>% DT::datatable(filter='top',options = list(pageLength = 5, dom = 'tip'))`</li>
+</ul>
+
