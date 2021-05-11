@@ -115,12 +115,17 @@ blog_link_names <- c("Food-and-PUG-Administration"
 template_text <- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 table_test <- data.frame(images = paste0("![](img/",img_file_names,")")
-                         , title = paste0("[YOUR NIFTY TITLE](https://stat231-s21.github.io/Blog-"
+                         , title = paste0('<h2 style="font-size:25px;"> [YOUR NIFTY TITLE](https://stat231-s21.github.io/Blog-'
                                          , blog_link_names
-                                         , ")")
-                        , text_only = template_text) %>%
+                                         , ")</h2>")
+                        , text_only = paste0('<p style="color:black;font-size:16px;">',template_text,'</p>')) %>%
   mutate(text = paste(title, text_only, sep="<br>")) %>%
   select(images, text)
+
+#https://www.color-hex.com/color-palette/26632
+#colorpal <- c("#ccade1","#745085", "#b1b8c0", "#777a7f", "#8f71b1")
+#colorpal <- c("#ede6fb","#cfc3e7","#ae97db", "#805cae","774bb0")
+colorpal <- c("774bb0","#ede6fb","774bb0","#ede6fb","774bb0","#ede6fb")
 ```
 
 STAT231, Amherst College
@@ -134,28 +139,6 @@ Spring 2021
 
 Add text
 
-```{r}
-sometext <- strsplit(paste0(
-  "You can even try to make some colorful things like this paragraph. ", 
-  "It may seem like a useless feature right now but it's so cool ",
-  "and nobody can resist. ;)"
-), " ")[[1]]
-text_formatted <- paste(
-  text_spec(sometext, color = spec_color(1:length(sometext), end = 0.9),
-            font_size = spec_font_size(1:length(sometext), begin = 5, end = 20)),
-  collapse = " ")
-
-#testtext <-  c(paste0("[YOUR NIFTY TITLE](https://stat231-s21.github.io/Blog-"
-#                                         , blog_link_names[1]
-#                                         , ")")
-#               , template_text[1])
-
-#text_formatted2 <- paste(text_spec(testtext, color = c("#440154FF","black")
-#                             , font_size = c(20,10)), collapse="<br>")
-
-#`r text_formatted`
-```
-
 # Blog Posts `r emo::ji("pencil")`
 
 ## Food and PUG Administration `r set.seed(15); emo::ji("medicine")`
@@ -163,15 +146,12 @@ text_formatted <- paste(
 ```{r}
 table_test %>%
   filter(str_detect(text, "Food-and-PUG-Administration")) %>%
-  #mutate(text_formatted =  paste(text_spec(c(title,text)
-  #                                        , color = c("#440154FF","black")
-  #                                          , font_size = c(20,10))
-  #                               , collapse="<br>")) %>%
-  #select(images, text_formatted) %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[1]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[1]))
 ```
 
 ## Vivacious Vaxxers `r set.seed(12); emo::ji("shot")`
@@ -183,8 +163,9 @@ table_test %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
-#              , background = "#806290")
+              , border_right = FALSE
+              , background = colorpal[2]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[2]))
 ```
 
 ## Girls Who Code `r set.seed(10); emo::ji("computer")`
@@ -195,8 +176,9 @@ table_test %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
-#              , background = "#dedaed")
+              , border_right = FALSE
+              , background = colorpal[3]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[3]))
 ```
 
 
@@ -208,7 +190,9 @@ table_test %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[4]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[4]))
 ```
 
 <br> 
@@ -221,7 +205,9 @@ table_test %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[5]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[5]))
 ```
 
 <br>
@@ -231,10 +217,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Wrangle-This-Messi-Data")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[1]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[6]))
 ```
 
 <br>
@@ -245,10 +233,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Lebron-Warrior-Hawks")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[2]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[7]))
 ```
 
 <br>
@@ -259,10 +249,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Team-Basketball")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[3]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[8]))
 ```
 
 <br>
@@ -272,10 +264,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Election-Pundits")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[4]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[9]))
 ```
 
 <br>
@@ -286,10 +280,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Nate-Platinum")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[5]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[10]))
 ```
 
 <br>
@@ -300,10 +296,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Team-Save-The-Planet")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[1]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[11]))
 ```
 
 <br>
@@ -315,10 +313,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "The-Naturers")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[2]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[12]))
 ```
 
 <br>
@@ -329,10 +329,12 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Blog-Ava")) %>%
-  kable(col.names=NULL) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
-              , border_right = FALSE)
+              , border_right = FALSE
+              , background = colorpal[3]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[13]))
 ```
 
 <br>
