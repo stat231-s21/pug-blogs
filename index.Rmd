@@ -112,13 +112,49 @@ blog_link_names <- c("Food-and-PUG-Administration"
                      , "The-Naturers"
                      , "Ava")
 
+titles <- c("Exploring Covid-19 Vaccinations in the United States by Race and Ethnicity"
+            , "Racism against Black and Asian American populations in COVID-19"
+            , "COVID-19 Impact on Individual Economic Health"
+            , "YOUR NIFTY TITLE"
+            , "The Global Water Access Gap"
+            , "Code-y Bellinger"
+            , "Evolution of the NBA In the Past Decade"
+            , "YOUR NIFTY TITLE"
+            , "Text Analysis of Biden and Trump Speeches During the 2020 Presidential Election"
+            , rep("YOUR NIFTY TITLE",1)
+            , "Global Biodiversity, Trade, and Conservation Funding"
+            , rep("YOUR NIFTY TITLE",2))
+
 template_text <- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
+text <- c(#food and pug adminitratin
+          template_text
+          #vivavious vaxxers
+          , "For our final project, we will not be building upon our mid-semester project, but instead looking at the social impacts of the pandemic specifically on Asian- and Black-American populations. Through our mid semester project we realized that the current available data surrounding vaccinations isn’t all that great; however, we still wanted to focus on COVID and the sociopolitical effects of the pandemic which have a multitude of public health implications. Additionally, this past year has brought the prevalence of anti-Black and anti-Asian hate crimes and violence to the forefront of many American minds. This issue is not just a social one but greatly impacts health, and as of early April, the CDC has declared racism as a threat to public health."
+          # girls who code
+          , "While COVID has affected almost everyone in the US and around the world, it is clear that the pandemic’s impact has not been felt equally. Americans of lower socioeconomic status before the pandemic have been disproportionately impacted by unemployment, food and housing insecurity, and health issues in the past year. As economic recovery policies are being created and implemented, it is important to know how measures like stimulus packages should be targeted to help those who have dealt with the most extreme impacts of COVID-19. In order to help serve this need, this project explores how different demographic and economic health variables can predict a variety of impacts of the pandemic."
+          #library cleanverse
+          , template_text
+          #JAMS
+          , "This blog analyzes the impact of differential access to drinking water around the world. As water is critical to our survival, water access affects nearly all parts of human life – including life expectancy, socioeconomic status, health and nutrition, and much more. With endless issues to study surrounding water access, we focus our blog on a few key interests of ours, including how water access levels relate to educational outcomes and economic development levels, as well as how social media are used as a tool for clean water advocacy."
+          # wrangle this messi data
+          , "For more than one hundred years, baseball has been a numbers game. We currently have access to hundreds of thousands of statistics dating back to the 1800s, presenting the rare opportunity to compare a slugger like Babe Ruth (a pitcher and hitter during the roaring ‘20s) to Mike Trout (the best ball-player today). In 2015, however, the MLB introduced a new method to track statistics: Statcast."
+          # lebron warrior hawks
+          , "Basketball is a sport that is continuously evolving. Since its invention, there have been many changes in both the rules and the style of play. Over the past decade, the league has undergone a rapid change due to both the increase in the use of analytics and changes in officiating . . . This blog will use two methods to observe the shift in strategy over the course of the history of the NBA. The first is to analyze shot location data, where the trend in the different locations where players shoot the ball are tracked since the 2010-2011 season. The second is by comparing present-day seasons to historical seasons."
+          # team basketball
+          # election pundits
+          # nate platinum
+          # team save the planet
+          # the naturers
+          # ava
+          , rep(template_text,6))
+  
 table_test <- data.frame(images = paste0("![](img/",img_file_names,")")
-                         , title = paste0('<h2 style="font-size:25px;"> [YOUR NIFTY TITLE](https://stat231-s21.github.io/Blog-'
+                         , title = paste0('<h2 style="font-size:20px;"> ['
+                                          , titles,'](https://stat231-s21.github.io/Blog-'
                                          , blog_link_names
                                          , ")</h2>")
-                        , text_only = paste0('<p style="color:black;font-size:16px;">',template_text,'</p>')) %>%
+                        , text_only = paste0('<p style="color:black;font-size:14px;">',text,'</p>')) %>%
   mutate(text = paste(title, text_only, sep="<br>")) %>%
   select(images, text)
 
@@ -344,7 +380,6 @@ table_test %>%
 <ul>
   <li> Design at top of page is taken from an image created by [Mona Chalabi](https://monachalabi.com/) </li>
   <li> Font is Poppins from [Google fonts](https://fonts.google.com/) </li>
-  <li> Emojis included via the [`emo` R package](https://github.com/hadley/emo) <br>
-          Check out the emojis available: `r emo::jis %>% select(group, subgroup, name, emoji,keywords,aliases) %>% DT::datatable(filter='top',options = list(pageLength = 5, dom = 'tip'))`</li>
+  <li> Emojis included via the [`emo` R package](https://github.com/hadley/emo) 
 </ul>
 
