@@ -87,6 +87,7 @@ img_file_names <- c("s2g5-socialjusticepublichealth.png"
                     , "s2g3-publichealth1.jpg"
                     , "s2g2-economics.png"
                     , "s1g6-publichealth.png"
+                    , "s1g5-economics.jpg"
                     , "s1g2-socialjustice.png"
                     , "s1g1-sports.jpeg"
                     , "s2g1-economics-sports.png"
@@ -102,6 +103,7 @@ blog_link_names <- c("Food-and-PUG-Administration"
                      , "VIVACIOUS-VAXXERS"
                      , "Girls-Who-Code"
                      , "library-cleanverse"
+                     , "Funemployed-Statisticians"
                      , "JAMS"
                      , "Wrangle-This-Messi-Data"
                      , "Lebron-Warrior-Hawks"
@@ -116,6 +118,7 @@ titles <- c("Exploring Covid-19 Vaccinations in the United States by Race and Et
             , "Racism against Black and Asian American populations in COVID-19"
             , "COVID-19 Impact on Individual Economic Health"
             , "COVID-19 Vaccinations in the United States: A Study"
+            , "COVID-19 Effects on the Real Estate Market"
             , "The Global Water Access Gap"
             , "Code-y Bellinger"
             , "Evolution of the NBA In the Past Decade"
@@ -136,7 +139,9 @@ text <- c(#food and pug adminitratin
           , "While COVID has affected almost everyone in the US and around the world, it is clear that the pandemic’s impact has not been felt equally. Americans of lower socioeconomic status before the pandemic have been disproportionately impacted by unemployment, food and housing insecurity, and health issues in the past year. As economic recovery policies are being created and implemented, it is important to know how measures like stimulus packages should be targeted to help those who have dealt with the most extreme impacts of COVID-19. In order to help serve this need, this project explores how different demographic and economic health variables can predict a variety of impacts of the pandemic."
           #library cleanverse
           , "It’s no secret that COVID-19 has dramatically changed our lives over the course of the past year. It’s only recently, as vaccines have started to become available, that society has begun to return to normal.<br> When we sat down to discuss what to study, we were all drawn to the dramatic impact of vaccinations. And although different aspects of the issue, ranging from differential state effects, to political correlations, to adaptations over time, caught our attention, it was clear that we wanted to study vaccination data. We thought we’d turn to the United States, as our previous project had a more international focus."
-          #JAMS
+          #Funemployed Staisticians
+          , "The median homeowner has 40 times the household wealth of a renter, according to the 2019 Survey of Consumer Finances, a triennial survey that collects detailed accounts of households’ finances (Kushi 2020). Other studies show that homeownership leads to greater wealth-building in comparison to renting. Thus, real estate and homeownership is still one of the best ways to build wealth, but is it really a good investment and does it perform well throughout economic downturns? Specifically how did it perform throughout the COVID-19 pandemic?"
+          # JAMS
           , "This blog analyzes the impact of differential access to drinking water around the world. As water is critical to our survival, water access affects nearly all parts of human life – including life expectancy, socioeconomic status, health and nutrition, and much more. With endless issues to study surrounding water access, we focus our blog on a few key interests of ours, including how water access levels relate to educational outcomes and economic development levels, as well as how social media are used as a tool for clean water advocacy."
           # wrangle this messi data
           , "For more than one hundred years, baseball has been a numbers game. We currently have access to hundreds of thousands of statistics dating back to the 1800s, presenting the rare opportunity to compare a slugger like Babe Ruth (a pitcher and hitter during the roaring ‘20s) to Mike Trout (the best ball-player today). In 2015, however, the MLB introduced a new method to track statistics: Statcast."
@@ -236,6 +241,21 @@ table_test %>%
               , border_right = FALSE
               , background = colorpal[4]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[4]))
+```
+
+<br> 
+
+## Funemployed Statisticians `r set.seed(54); emo::ji("bar_chart")`
+
+```{r}
+table_test %>%
+  filter(str_detect(text, "Funemployed-Statisticians")) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
+  column_spec(1:2, width = c("50em","50em")
+              , border_left = FALSE
+              , border_right = FALSE
+              , background = colorpal[1]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[1]))
 ```
 
 <br> 
