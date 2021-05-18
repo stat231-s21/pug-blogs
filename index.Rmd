@@ -185,7 +185,44 @@ Spring 2021
 
 # Welcome! `r emo::ji("slightly_smiling_face")` 
 
-Add text
+From attacking the COVID pandemic, to politics, the environment and sports – oh my! -- we found data science to be a tool for empowerment, while also creating space for joy.  (At least, I hope you’d agree!)  To that end, here’s a little **Ode to Data**:
+<br>
+<br>
+We use data
+  <p style="margin-left: 40px;font-size:14px;"> To count the deaths <br>
+  To track the vaccinations <br>
+  To identify disparities in health <br>
+  and highlight polarities in wealth <br>
+  Data as [accountability](d4bl.org) <br>
+  A protest against the insurmountability <br>
+  of it all. </p>
+We choose data
+   <p style="margin-left: 40px;font-size:14px;"> To count the species <br>
+	To track the endangered <br>
+	To identify severities of pollution <br>
+	and highlight potentials for a solution <br>
+	Data as visibility <br>
+	A testament to earth’s fragility <br>
+	after all.  </p>
+We lose ourselves in data
+  <p style="margin-left: 40px;font-size:14px;"> To count the votes <br>
+  To track the elections <br>
+	To identify who gives what in campaign donations <br>
+	and highlight who says what in campaign orations <br>
+	Data as illumination <br>
+	On the politics of a nation <br>
+	at odds. </p>
+We amuse ourselves with data
+	<p style="margin-left: 40px;font-size:14px;"> To count the wins <br>
+	To track the fans <br>
+	To identify directions to allay naysayers <br>
+  and highlight connections between NBA players <br>
+	Data as innovation <br> 
+	An avenue to the elation <br>
+	victory brings. </p>
+
+<br>
+<br>
 
 # Blog Posts `r emo::ji("pencil")`
 
