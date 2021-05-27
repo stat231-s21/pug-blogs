@@ -68,16 +68,11 @@ a:hover {
 }
 
 /*----------LOGO above TOC---------*/
-
-#TOC::before {
-  content: "" !important;
-  display: block !important;
-  height: 200px !important;
-  margin: 20px 20px 40px 20px !important;
-  background-image: "img/monachalabi_interethnicmarriages2.png" !important;
-  background-size: contain !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+#toc {
+  background-image: url("img/Mammoth-masked-stomping-transparent.gif") !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 ```
 
@@ -215,7 +210,7 @@ We lose ourselves in data
 We amuse ourselves with data
 	<p style="margin-left: 40px;font-size:14px;"> To count the wins <br>
 	To track the fans <br>
-	To identify directions to allay naysayers <br>
+	To identify directions in MLB sprayers <br>
   and highlight connections between NBA players <br>
 	Data as innovation <br> 
 	An avenue to the elation <br>
@@ -349,12 +344,14 @@ table_test %>%
 ```{r}
 table_test %>%
   filter(str_detect(text, "Team-Basketball")) %>%
+  mutate(text = str_replace(text, "https://stat231-s21.github.io/Blog-Team-Basketball"
+                            , "https://emmagardecki.shinyapps.io/Blog-Team-Basketball/")) %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[3]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[8]))
+ column_spec(1, link = "https://emmagardecki.shinyapps.io/Blog-Team-Basketball/")
 ```
 
 <br>
