@@ -107,7 +107,7 @@ blog_link_names <- c("Food-and-PUG-Administration"
                      , "Election-Pundits"
                      , "Nate-Platinum"
                      , "Seamus-Matthew/"
-                     , "Team-Save-The-Planet/"
+                     , "Team-Save-the-Planet"
                      , "The-Naturers"
                      , "Ava")
 
@@ -172,19 +172,15 @@ table_test <- data.frame(images = paste0("![](img/",img_file_names,")")
 #https://www.color-hex.com/color-palette/26632
 #colorpal <- c("#ccade1","#745085", "#b1b8c0", "#777a7f", "#8f71b1")
 #colorpal <- c("#ede6fb","#cfc3e7","#ae97db", "#805cae","774bb0")
-colorpal <- c("774bb0","#ede6fb","774bb0","#ede6fb","774bb0","#ede6fb")
+colorpal <- c("774bb0","#ede6fb")
 ```
 
-STAT231, Amherst College
-<br>
-Spring 2021
-<br>
-![](img/monachalabi_interethnicmarriages2.png)
+![](img/classimg.png)
 
 
 # Welcome! `r emo::ji("slightly_smiling_face")` 
 
-From attacking the COVID pandemic, to politics, the environment and sports – oh my! -- we found data science to be a tool for empowerment, while also creating space for joy.  (At least, I hope you’d agree!)  To that end, here’s a little **Ode to Data**:
+In collaboration with our Power Up Groups (PUGs), we embarked on data science projects this semester to develop our data science skills, gain confidence in our ability to code and troubleshoot coding challenges, and experience how empowering data science can be. From attacking the COVID pandemic, to politics, the environment and sports – oh my! -- we harnessed our creativity, fed off each other's energy, and found joy in coding. To that end, here’s a little **Ode to Data**:
 <br>
 <br>
 We use data
@@ -214,12 +210,12 @@ We lose ourselves in data
 We amuse ourselves with data
 	<p style="margin-left: 40px;font-size:14px;"> To count the wins <br>
 	To track the fans <br>
-	To identify directions in MLB sprayers <br>
+	To identify directions with MLB sprayers <br>
   and highlight connections between NBA players <br>
 	Data as innovation <br> 
 	An avenue to the elation <br>
 	victory brings. </p>
-
+<p style="margin-left: 80px;font-size:14px;font-style: italic;"> -- Kat Correia </p>
 <br>
 <br>
 
@@ -261,7 +257,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[3]) %>%
+              , background = colorpal[1]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[3]))
 ```
 
@@ -275,7 +271,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[4]) %>%
+              , background = colorpal[2]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[4]))
 ```
 
@@ -305,7 +301,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[5]) %>%
+              , background = colorpal[2]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[6]))
 ```
 
@@ -354,7 +350,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[3]) %>%
+              , background = colorpal[1]) %>%
  column_spec(1, link = "https://emmagardecki.shinyapps.io/Blog-Team-Basketball/")
 ```
 
@@ -369,7 +365,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[4]) %>%
+              , background = colorpal[2]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[10]))
 ```
 
@@ -385,7 +381,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[5]) %>%
+              , background = colorpal[1]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[11]))
 ```
 
@@ -401,7 +397,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[5]) %>%
+              , background = colorpal[2]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[12]))
 ```
 
@@ -412,7 +408,7 @@ table_test %>%
 
 ```{r}
 table_test %>%
-  filter(str_detect(text, "Team-Save-The-Planet")) %>%
+  filter(str_detect(text, "Team-Save-the-Planet")) %>%
   kable(col.names=NULL, escape=FALSE) %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
@@ -450,7 +446,7 @@ table_test %>%
   column_spec(1:2, width = c("50em","50em")
               , border_left = FALSE
               , border_right = FALSE
-              , background = colorpal[3]) %>%
+              , background = colorpal[1]) %>%
  column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[15]))
 ```
 
