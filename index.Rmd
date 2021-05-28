@@ -89,9 +89,10 @@ img_file_names <- c("s2g5-socialjusticepublichealth.png"
                     , "s2g6-sports.jpg"
                     , "s2g7-politics.jpg"
                     , "S1-politics.jpg"
+                    , "mattseamus.png"
                     , "s1g4-environment.png"
                     , "s2g4-environment.png"
-                    , "temp-sun.png")
+                    , "ava.png")
                     
 
 blog_link_names <- c("Food-and-PUG-Administration"
@@ -105,7 +106,8 @@ blog_link_names <- c("Food-and-PUG-Administration"
                      , "Team-Basketball"
                      , "Election-Pundits"
                      , "Nate-Platinum"
-                     , "Team-Save-The-Planet"
+                     , "Seamus-Matthew/"
+                     , "Team-Save-The-Planet/"
                      , "The-Naturers"
                      , "Ava")
 
@@ -120,6 +122,7 @@ titles <- c("Exploring Covid-19 Vaccinations in the United States by Race and Et
             , "NBA Connections"
             , "Text Analysis of Biden and Trump Speeches During the 2020 Presidential Election"
             , "2020 Presidential Election Finances"
+            , "Campaign Contributions and Presidential Elections"
             , "Global Biodiversity, Trade, and Conservation Funding"
             , "Energy Usage in the United States"
             , "Geography of Covid Vaccine Hesitancy in the U.S.")
@@ -149,12 +152,13 @@ text <- c(#food and pug adminitratin
           # nate platinum, sarah
           , "We live in a world where money and politics are largely intertwined. This fact is starkly apparent when examining the net worth of certain 2020 presidential candidates. Michael Bloomberg, who has a net worth of $59 billion, spent over $1 billion on his own candidacy. Tom Steyer, a former hedge fund manager and billionaire, also made a run for President. The 45th President, Donald Trump, made a fortune through his real estate empire, allocating millions to his campaign. The 2020 election, including both presidential and congressional races, cost a record-breaking $14 billion. Aside from candidates’ own wealth, where is the rest of this campaign money coming from?"
           # nate platinum, matthew&seamus
+          , "The 2020 election was the most expensive in American history: Campaign spending on the presidential election and congressional races totaled a staggering 14 billion dollars, shattering the previous record of 7 billion dollars. The increasingly important role that money plays in American politics suggests some natural questions: Where does this money come from? What’s driving the explosion in fundraising? How are fundraising totals by each party associated with election results?"
           # team save the planet
-          , "Research out of the University of Arizona suggests that one in three species are likely to be extinct by the end of the century (article [here](https://www.cnn.com/2020/02/21/weather/species-extinction-climate-trnd/index.html)), in large part due to human activities. Conservation efforts are underway across the globe, but what we are currently doing is not enough. The goal of this blog post is to illustrate where the greatest biodiversity in the world exists, where conservation funding is being concentrated, and where animal trade is occurring, in an attempt to reveal where we are centering our conservation efforts and where we perhaps should be. In the process, we encounter current problems with species data collection and consider possible solutions."
+          , "Over the past 40 years, vertebrate population sizes measured by the World Wildlife Fund have more than halved, mostly due to overhunting and habitat destruction from urban development, and research out of the University of Arizona suggests that one in three species are likely to be extinct by the end of the century (article [here](https://www.cnn.com/2020/02/21/weather/species-extinction-climate-trnd/index.html)), in large part due to human activities. Our motivation for this blog post is to analyze global species biodiversity distribution and our impact on the loss and preservation of said biodiversity. Maintaining natural ecosystem biodiversity is crucial to sustaining human life on this planet because functioning ecological systems provide clean air and water, as well as pollination of agriculture crops. Without the natural species present, the delicate balance of these systems is destroyed, and with it, our planet and us."
           # the naturers
           , "With climate change being one of the most pressing issues of our generation, finding ways to combat this enormous problem is going to require a bunch of system level changes all happening at the same time in order to mitigate the negative effects. Currently one of the biggest transformations that is going to be required to reduce the total amount of carbon emissions, especially here within the United States, is finding a way to transition the country towards renewable energy and cutting back on fossil fuels."
           # ava
-          , "Back in March, I created my PUG Shiny project with a focus on COVID vaccine distribution. At the time, the issue facing the united states was primarily one of distribution: people who wanted the vaccine couldn’t get it. Eligibility was restricted state by state to allocate a precious resource. Even people who were eligible needed to get lucky and navigate online sign up forms, vouching for fewer spots than people . . . Over the past six weeks, the supply chain has greatly improved, and access is no longer such a pressing issue. The issues facing the country have evolved: the issue now is acheiving heard immunity, and getting everyone vaccinated. In March, I didn’t know anyone who had gotten a vaccine. But now in April, I don’t know anyone who hasn’t gotten one. I wanted to map out where in the country people are the most hesitant to get vaccinated. Knowing the most resistant geographies could be useful information for government organizations to focus their vaccine advocacy efforts.")
+          , "Over the past six weeks, the supply chain [for covid vaccines] has greatly improved, and access is no longer such a pressing issue. The issues facing the country have evolved: the issue now is acheiving heard immunity, and getting everyone vaccinated. In March, I didn’t know anyone who had gotten a vaccine. But now in April, I don’t know anyone who hasn’t gotten one. I wanted to map out where in the country people are the most hesitant to get vaccinated. Knowing the most resistant geographies could be useful information for government organizations to focus their vaccine advocacy efforts.")
   
 table_test <- data.frame(images = paste0("![](img/",img_file_names,")")
                          , title = paste0('<h2 style="font-size:20px;"> ['
@@ -287,7 +291,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[1]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[1]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[5]))
 ```
 
 <br> 
@@ -302,7 +306,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[5]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[5]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[6]))
 ```
 
 <br>
@@ -317,7 +321,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[1]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[6]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[7]))
 ```
 
 <br>
@@ -333,7 +337,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[2]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[7]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[8]))
 ```
 
 <br>
@@ -366,12 +370,12 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[4]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[9]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[10]))
 ```
 
 <br>
 
-## Nate Platinum `r set.seed(21); emo::ji("look")`
+## Nate Platinum: Part 1 `r set.seed(20); emo::ji("money")`
 
 
 ```{r}
@@ -382,7 +386,23 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[5]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[10]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[11]))
+```
+
+<br>
+
+## Nate Platinum: Part 2 `r set.seed(21); emo::ji("money")`
+
+
+```{r}
+table_test %>%
+  filter(str_detect(text, "Seamus-Matthew")) %>%
+  kable(col.names=NULL, escape=FALSE) %>%
+  column_spec(1:2, width = c("50em","50em")
+              , border_left = FALSE
+              , border_right = FALSE
+              , background = colorpal[5]) %>%
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[12]))
 ```
 
 <br>
@@ -398,7 +418,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[1]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[11]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[13]))
 ```
 
 <br>
@@ -415,7 +435,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[2]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[12]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[14]))
 ```
 
 <br>
@@ -431,7 +451,7 @@ table_test %>%
               , border_left = FALSE
               , border_right = FALSE
               , background = colorpal[3]) %>%
- column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[13]))
+ column_spec(1, link = paste0('https://stat231-s21.github.io/Blog-', blog_link_names[15]))
 ```
 
 <br>
